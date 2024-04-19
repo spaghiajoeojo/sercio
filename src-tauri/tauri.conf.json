@@ -2,7 +2,7 @@
   "build": {
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",
-    "devPath": "http://localhost:1420",
+    "devPath": "http://localhost:1421",
     "distDir": "../dist"
   },
   "package": {
@@ -14,14 +14,46 @@
       "all": false,
       "shell": {
         "all": false,
-        "open": true
+        "open": "^.*$"
+      },
+      "window": {
+        "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "process": {
+        "all": false,
+        "exit": true,
+        "relaunch": false,
+        "relaunchDangerousAllowSymlinkMacos": false
+      },
+      "fs": {
+        "all": false,
+        "copyFile": false,
+        "createDir": false,
+        "exists": false,
+        "readDir": true,
+        "readFile": false,
+        "removeDir": false,
+        "removeFile": false,
+        "renameFile": false,
+        "scope": [
+          "$DOCUMENT", "$DOWNLOAD", "$DESKTOP",
+          "$DOCUMENT/**", "$DOWNLOAD/**", "$DESKTOP/**"
+        ],
+        "writeFile": false
       }
     },
     "windows": [
       {
-        "title": "sercio-v2",
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "Sercio",
         "width": 800,
-        "height": 600
+        "transparent": true,
+        "decorations": false
       }
     ],
     "security": {
