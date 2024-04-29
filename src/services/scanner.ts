@@ -26,7 +26,7 @@ const registerCallback = async (fn: () => void, timeout: number) => {
 }
 
 
-let interval: number | null = null;
+let interval: NodeJS.Timeout | null = null;
 
 export const resolveBaseDirectory = async (baseDirectory: BaseDirectory) => {
 

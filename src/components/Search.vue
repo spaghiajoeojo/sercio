@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { searchByName } from "../services/database";
+import { searchByVector } from "../services/database";
 import Item from "./Item.vue";
 
 const query = ref("");
@@ -8,7 +8,7 @@ let page = 0;
 const results = ref([]);
 
 const search = async () => {
-  results.value = await searchByName(query.value, page);
+  results.value = await searchByVector(query.value, page);
   page += 1;
 };
 const onNewSearchRequest = () => {
